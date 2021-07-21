@@ -41,11 +41,15 @@ STEPS_PER_SECOND = 100
 MIN_PITCH = 21
 MAX_PITCH = 108
 
+import os
+
+BASE_URL = os.environ.get("TFRECORDS", "gs://magentadata/datasets/maestro/v1.0.0/maestro-v1.0.0_")
+
 # pylint: disable=line-too-long
 MAESTRO_TFRECORD_PATHS = {
-    'train': 'gs://magentadata/datasets/maestro/v1.0.0/maestro-v1.0.0_train.tfrecord',
-    'dev': 'gs://magentadata/datasets/maestro/v1.0.0/maestro-v1.0.0_validation.tfrecord',
-    'test': 'gs://magentadata/datasets/maestro/v1.0.0/maestro-v1.0.0_test.tfrecord'
+    'train': BASE_URL + 'train.tfrecord',
+    'dev': BASE_URL + 'validation.tfrecord',
+    'test': BASE_URL + 'test.tfrecord'
 }
 # pylint: enable=line-too-long
 
