@@ -48,7 +48,7 @@ REQUIRED_PACKAGES = [
     'six >= 1.12.0',
     'sk-video',
     'sox >= 1.3.7',
-    'tensor2tensor',
+    'tensor2tensor @ git+https://github.com/UoA-eResearch/tensor2tensor',
     'tensorflow',
     'tensorflow-datasets',
     'tensorflow-probability',
